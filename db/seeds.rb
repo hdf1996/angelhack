@@ -1,27 +1,46 @@
 require "ffaker"
+require "faker"
 
 ActiveRecord::Base.transaction do
   Event.destroy_all
 
-  12.downto(1).each do |i|
+  120.downto(1).each do |i|
     date = Time.now - i.days
 
     Event.create!(
-      event_type: ["health", "productivity"].sample,
-      name: ["sleep","sexy_time", "work", "run", "walk"].sample,
+      name: "sleep",
       date: Time.new(
         date.year,
         date.month,
         date.day,
-       rand(20..23)
+        rand(20..23)
       ),
-      metadata: { duration: rand((60*5)..(60*10)) }
+      value: rand((1.hours / 60)..(10.hours / 60))
     )
 
-    did_fuck = rand(1..3) == 1
+    Event.create!(
+      name: "run",
+      date: Time.new(
+        date.year,
+        date.month,
+        date.day,
+        rand(7..23)
+      ),
+      value: rand(30..120)
+    ) if [6,0].include?(date.wday)
 
     Event.create!(
-      event_type: "health",
+      name: "work",
+      date: Time.new(
+        date.year,
+        date.month,
+        date.day,
+        rand(7..11)
+      ),
+      value: rand(5..9)
+    ) if (1..5) === date.wday
+
+    Event.create!(
       name: "sexy_time",
       date: Time.new(
         date.year,
@@ -29,7 +48,14 @@ ActiveRecord::Base.transaction do
         date.day,
        rand(0..23)
       ),
-      metadata: { duration: rand(10..45) }
-    ) if did_fuck
+      value: rand(10..45)
+    ) if did_fuck = rand(1..3) == 1
+
+    email = Faker::Internet.email
+    User.create(
+      uid: email,
+      email: email,
+      password: Faker::Internet.password
+    )
   end
 end

@@ -42,10 +42,9 @@ class Api::EventsController < ApplicationController
 
 	def permitted_attributes
 		params.require(:event).permit(
-		  :event_type,
 			:name,
 			:date,
-			:metadata
+			:value
 		)
 	end
 end

@@ -3,19 +3,20 @@
   height: 100vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.05);
+  position: relative;
 }
+
+/* Sidebar */
 
 .dashboard sidebar{
   display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
   width: 250px;
   height: 100vh;
   background-color: #222228;
-  float: left;
-}
-
-.dashboard .head{
-  height: 64px;
-  background-color: white;
 }
 
 .dashboard .logo{
@@ -23,18 +24,51 @@
   font-size: 28px;
   line-height: 64px;
   margin: 0;
-  border-bottom: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(255,255,255,.1);
   padding-left: 20px;
 }
 
 .dashboard .sidebar-list{
   list-style-type: none;
   color: rgba(255, 255, 255, .75);
-  padding-left: 20px;
+  padding: 0;
+  margin-top: 20px;
 }
 
-.dashboard .sidebar-list a{
+.dashboard .sidebar-item a{
   color: currentColor;
+  display: block;
+  line-height: 48px;
+  padding-left: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.dashboard .sidebar-item.active a,
+.dashboard .sidebar-item:hover a{
+  text-decoration: none;
+  padding-left: 16px;
+  border-left: 4px solid #50E3C2;
+}
+
+/* Content */
+
+.dashboard .content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 250px;
+}
+
+.dashboard .head{
+  height: 64px;
+  background-color: white;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .dashboard .avatar{
@@ -53,11 +87,12 @@
 
 .dashboard .avatar-name{
   display: inline-block;
-  color: black;
+  color: rgba(0,0,0,.84);
   line-height: 64px;
 }
 
-.dashboard .sidebar-item{
-  text-transform: uppercase;
-  line-height: 32px;
+.dashboard .main-content{
+  overflow-y: scroll;
+  padding: 93px 30px 0 30px;
+  height: 100%;
 }
