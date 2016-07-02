@@ -4,6 +4,6 @@ angular.module("logu")
 
     $scope.login = function () {
       localStorage.setItem('user', $scope.user.name);
-      $state.go("home");
+      $state.go("dashboard");
     }
   }]);
