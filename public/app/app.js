@@ -6,8 +6,8 @@ angular.module("logu", [
     $scope.user = {};
 
     $scope.login = function () {
-      localStorage.user.set('user', $scope.user.name);
-      $state.go("main");
+      localStorage.setItem('user', $scope.user.name);
+      $state.go("home");
     }
   }])
   .config(['$stateProvider', '$urlRouterProvider',
