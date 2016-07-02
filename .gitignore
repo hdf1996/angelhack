@@ -58,3 +58,6 @@ bower.json
 .powenv
 # Ignore Byebug command history file.
 .byebug_history
+
+node_modules/
+.idea
