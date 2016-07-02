@@ -13,7 +13,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'devise_token_auth'
 gem "ffaker"
-gem "faker"
 group :development, :test do
   gem 'byebug', platform: :mri
 end
