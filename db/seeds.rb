@@ -1,5 +1,5 @@
 require "ffaker"
-
+require "faker"
 ActiveRecord::Base.transaction do
   Event.destroy_all
 
@@ -29,7 +29,16 @@ ActiveRecord::Base.transaction do
         date.day,
        rand(0..23)
       ),
-      metadata: { duration: rand(10..45) }
+      metadata: { duration: rand(10..90) }
     ) if did_fuck
+
+    email = Faker::Internet.email
+    User.create(
+      uid: email,
+      email:email,
+      password: Faker::Internet.password
+    )
+
   end
+
 end
