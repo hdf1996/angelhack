@@ -38,22 +38,23 @@
 }
 
 .dashboard .avatar{
-  padding: 30px 0;
+  float: right;
+  padding: 0 15px;
 }
 
 .dashboard .avatar-image{
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 64px;
 }
 
 .dashboard .avatar-name{
-  display: block;
-  color: white;
-  text-align: center;
+  display: inline-block;
+  color: black;
+  line-height: 64px;
 }
 
 .dashboard .sidebar-item{
