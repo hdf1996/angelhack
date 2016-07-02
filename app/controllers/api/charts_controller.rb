@@ -11,11 +11,10 @@ class Api::ChartsController < ApplicationController
 			data_by_days = []
 			current_events = events.where(name: event_name)
 			(to-from).to_i.times do |day|
-				data_by_days.push current_events.where(date:from + day.days).try(:first).try(:value) || 0
+				data_by_days.push current_events.where(date:from + day.days).try(:first).try(:value) 
 			end
 			event_chart = {
 			   label: event_name,
-			   sum: current_events.sum(:value),
 		       data: data_by_days
 			}
 			events_chart.push event_chart
