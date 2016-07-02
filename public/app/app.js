@@ -2,6 +2,14 @@ angular.module("logu", [
     'ui.router',
     'ui.bootstrap'
   ])
+  .controller('LoginController', ['$scope', '$state', function ($scope, $state) {
+    $scope.user = {};
+
+    $scope.login = function () {
+      localStorage.setItem('user', $scope.user.name);
+      $state.go("home");
+    }
+  }])
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/home');
@@ -11,10 +19,11 @@ angular.module("logu", [
           url: '/home',
           templateUrl: '/app/partials/landing.html'
         })
-        .state('about', {
-          // we'll get to this in a bit
+        .state('login', {
+          url: '/login',
+          templateUrl: '/app/partials/login.html',
+          controller: 'LoginController'
         });
-
     }])
     .run(function () {});
 
