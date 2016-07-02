@@ -1,0 +1,54 @@
+.hero{
+  text-align: center;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  background: #9D50BB; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #9D50BB , #6E48AA); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #9D50BB , #6E48AA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.hero .authentication{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.hero .authentication .btn + .btn{
+  margin-left: 10px;
+}
+
+.hero .logo{
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.landing{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.landing ul{
+  list-style-type: none;
+  font-size: 24px;
+}
+
+.landing ul .step{
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.landing ul img{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
