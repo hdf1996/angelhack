@@ -13,9 +13,23 @@ ActiveRecord::Base.transaction do
         date.year,
         date.month,
         date.day,
-       rand()
+       rand(20..23)
       ),
-      metadata: { duration: rand(5..10) }
+      metadata: { duration: rand((60*5)..(60*10)) }
     )
+
+    did_fuck = rand(1..3) == 1
+
+    Event.create!(
+      event_type: "health",
+      name: "sexy_time",
+      date: Time.new(
+        date.year,
+        date.month,
+        date.day,
+       rand(0..23)
+      ),
+      metadata: { duration: rand(10..45) }
+    ) if did_fuck
   end
 end
