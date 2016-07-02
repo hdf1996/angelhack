@@ -3,16 +3,22 @@
     <h1 class="logo">log ü</h1>
     <ul class="sidebar-list">
       <li class="sidebar-item">
-        <a href="#">Dashboard</a>
+        <a href="#">
+          <i class="fa fa-tachometer" aria-hidden="true"></i>
+          General
+        </a>
       </li>
-      <li class="sidebar-item">
+      <li class="sidebar-item" ui-sref-active="active">
         <a href="#">Sleep</a>
       </li>
-      <li class="sidebar-item">
+      <li class="sidebar-item" ui-sref-active="active">
         <a href="#">Productivity</a>
       </li>
-      <li class="sidebar-item">
+      <li class="sidebar-item" ui-sref-active="active">
         <a href="#">Phisical activity</a>
+      </li>
+      <li class="sidebar-item" ui-sref-active="active">
+        <a ui-sref="dashboard.connect-applications">Connect application</a>
       </li>
     </ul>
   </sidebar>
@@ -23,5 +29,6 @@
         <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="" class="avatar-image">
       </div>
     </div>
+    <div class="main-content" data-ui-view></div>
   </div>
 </div>

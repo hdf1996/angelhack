@@ -16,6 +16,11 @@ angular.module("logu", [
           templateUrl: '/app/partials/dashboard.html',
           controller: 'DashboardController'
         })
+        .state('dashboard.connect-applications', {
+          url: '/connect-applications',
+          templateUrl: '/app/partials/connect-applications.html'
+          // controller: 'DashboardController'
+        })
         .state('login', {
           url: '/login',
           templateUrl: '/app/partials/login.html',
@@ -23,4 +28,3 @@ angular.module("logu", [
         });
     }])
     .run(function () {});
-
