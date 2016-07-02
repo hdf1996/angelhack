@@ -1,7 +1,5 @@
 class Api::EventsController < ApplicationController
 	def index
-		render json: {
-			test: "test"
-		}
+		render json: Event.all
 	end
 end
