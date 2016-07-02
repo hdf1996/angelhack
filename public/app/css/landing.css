@@ -3,9 +3,9 @@
   color: white;
   padding: 100px 0;
   position: relative;
-  background: #9D50BB; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #9D50BB , #6E48AA); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #9D50BB , #6E48AA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #76b852 , #8DC26F); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #76b852 , #8DC26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
 }
 
 .hero .authentication{
@@ -33,6 +33,10 @@
   font-size: 24px;
 }
 
+.landing li{
+  margin-bottom: 100px;
+}
+
 .landing ul .step{
   display: block;
   width: 30px;
@@ -51,4 +55,16 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+
+.step2-photo{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-image: url('../images/step2.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
