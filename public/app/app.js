@@ -21,6 +21,18 @@ angular.module("logu", [
           url: '/general',
           templateUrl: '/app/partials/general.html'
         })
+        .state('dashboard.sleep', {
+          url: '/sleep',
+          templateUrl: '/app/partials/sleep.html'
+        })
+        .state('dashboard.productivity', {
+          url: '/productivity',
+          templateUrl: '/app/partials/productivity.html'
+        })
+        .state('dashboard.activity', {
+          url: '/activity',
+          templateUrl: '/app/partials/activity.html'
+        })
         .state('dashboard.connect-applications', {
           url: '/connect-applications',
           templateUrl: '/app/partials/connect-applications.html'

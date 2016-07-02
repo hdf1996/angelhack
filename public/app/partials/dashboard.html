@@ -1,6 +1,8 @@
 <div class="dashboard">
   <sidebar>
-    <h1 class="logo">log ü</h1>
+    <h1 class="logo">
+      <img src="app/images/logo.svg" class="logo-image" alt="" />
+    </h1>
     <ul class="sidebar-list">
       <li class="sidebar-item" ui-sref-active="active">
         <a ui-sref="dashboard.general">
@@ -8,13 +10,19 @@
         </a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a href="#">Sleep</a>
+        <a ui-sref="dashboard.sleep">Sleep</a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a href="#">Productivity</a>
+        <a ui-sref="dashboard.productivity">
+          Productivity
+          <span class="sidebar-item-alerts">1</span>
+        </a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a href="#">Phisical activity</a>
+        <a ui-sref="dashboard.activity">
+          Activity
+          <span class="sidebar-item-alerts">2</span>
+        </a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
         <a ui-sref="dashboard.connect-applications">Connect application</a>
@@ -26,6 +34,8 @@
       <div class="avatar">
         <span class="avatar-name">Nicolas Oga</span>
         <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="" class="avatar-image">
+
+        <charts></charts>
       </div>
     </div>
     <div class="main-content" data-ui-view></div>
