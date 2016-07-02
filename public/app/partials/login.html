@@ -1,0 +1,17 @@
+<form ng-submit="login()">
+  <div class="form-group">
+    <label for="username">Name</label>
+    <input class="form-control"
+           type="text"
+           id="username"
+           ng-model="user.name"
+           placeholder="Name">
+    <label for="password">Password</label>
+    <input class="form-control"
+           type="password"
+           id="password"
+           ng-model="user.password"
+           placeholder="Password">
+    <button type="submit" class="btn btn-default">Entrar</button>
+  </div>
+</form>
