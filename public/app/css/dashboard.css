@@ -28,6 +28,12 @@
   padding-left: 20px;
 }
 
+.dashboard .logo .logo-image{
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
 .dashboard .sidebar-list{
   list-style-type: none;
   color: rgba(255, 255, 255, .75);
@@ -42,12 +48,26 @@
   padding-left: 20px;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  position: relative;
 }
 .dashboard .sidebar-item.active a,
 .dashboard .sidebar-item:hover a{
   text-decoration: none;
   padding-left: 16px;
   border-left: 4px solid #50E3C2;
+}
+
+.sidebar-item-alerts{
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  background-color: #50E3C2;
+  color: #222228;
+  padding: 4px 6px;
+  border-radius: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
 }
 
 /* Content */

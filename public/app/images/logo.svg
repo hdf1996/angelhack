@@ -1,0 +1,15 @@
+<svg width="244px" height="208px" viewBox="968 183 244 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="logu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(968.000000, 183.000000)">
+        <g id="Layer_1">
+            <path d="M239.218,65.15 C239.218,84.5 230.649,101.799 217.138,113.589 L125.979,204.749 C124.418,206.309 122.309,207.179 120.108,207.179 C117.898,207.179 115.788,206.309 114.238,204.749 L29.178,119.699 L51.018,92.819 L100.178,123.379 L154.128,60.329 L199.658,93.759 L238.708,57.02 C239.048,59.69 239.218,62.4 239.218,65.15 L239.218,65.15 Z" id="Shape" stroke="#FFFFFF" fill="#F8FE85"></path>
+            <path d="M238.708,57.021 L199.658,93.76 L154.128,60.33 L100.178,123.38 L51.018,92.82 L29.178,119.7 L23.068,113.59 C9.568,101.8 0.988,84.5 0.988,65.151 C0.988,29.621 29.788,0.821 65.318,0.821 C88.518,0.821 108.788,13.141 120.108,31.55 C131.428,13.141 151.689,0.821 174.888,0.821 C207.668,0.82 234.718,25.33 238.708,57.021 L238.708,57.021 Z" id="Shape" stroke="#FFFFFF" fill="#2BE5A6"></path>
+            <path d="M29.178,119.7 L24.238,125.79" id="Shape" stroke="#FFFFFF" stroke-width="5"></path>
+            <polyline id="Shape" stroke="#FFFFFF" stroke-width="5" points="24.24 125.787 51.014 92.823 100.175 123.378 154.124 60.326 199.66 93.76 241.012 54.85"></polyline>
+            <circle id="Oval" fill="#FFFFFF" cx="51.033" cy="94.823" r="7.522"></circle>
+            <circle id="Oval" fill="#FFFFFF" cx="100.021" cy="120.455" r="8.567"></circle>
+            <circle id="Oval" fill="#FFFFFF" cx="154.112" cy="62.413" r="8.568"></circle>
+            <circle id="Oval" fill="#FFFFFF" cx="199.509" cy="91.514" r="8.568"></circle>
+        </g>
+    </g>
+</svg>
