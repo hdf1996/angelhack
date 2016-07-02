@@ -4,8 +4,8 @@ require "ffaker"
   date = Time.now - i.days
 
   Event.create!(
-    event_type: "health",
-    name: "sleep",
+    event_type: ["health", "productivity"].sample,
+    name: ["sleep","sexy_time", "work", "run", "walk"].sample,
     date: Time.new(
       date.year,
       date.month,
