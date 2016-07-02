@@ -1,4 +1,4 @@
-class Event < ActiveRecord
+class Event < ActiveRecord::Base
   validates :name, :date, :value, presence: true
 
   scope :created_between, ->(from, to) {where('date > ? AND date < ?', from, to)}
