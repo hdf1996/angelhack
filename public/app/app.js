@@ -5,6 +5,7 @@ angular.module("logu", [
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/home');
+      $urlRouterProvider.when('/dashboard', '/dashboard/general');
 
       $stateProvider
         .state('home', {
@@ -16,10 +17,13 @@ angular.module("logu", [
           templateUrl: '/app/partials/dashboard.html',
           controller: 'DashboardController'
         })
+        .state('dashboard.general', {
+          url: '/general',
+          templateUrl: '/app/partials/general.html'
+        })
         .state('dashboard.connect-applications', {
           url: '/connect-applications',
           templateUrl: '/app/partials/connect-applications.html'
-          // controller: 'DashboardController'
         })
         .state('login', {
           url: '/login',
