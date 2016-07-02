@@ -16,22 +16,12 @@ ActiveRecord::Schema.define(version: 20160702204442) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-<<<<<<< HEAD
-    t.string   "event_type",  null: false
-    t.string   "name",        null: false
-    t.string   "description"
-    t.json     "metadata"
-    t.datetime "date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "user_id"
-=======
     t.string   "name",       null: false
     t.integer  "value",      null: false
     t.datetime "date",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> 8d0d8eaf08000044a68a99b1a4d698e9bcb1d8fc
+    t.integer  "user_id"
     t.index ["date"], name: "index_events_on_date", using: :btree
     t.index ["name"], name: "index_events_on_name", using: :btree
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree

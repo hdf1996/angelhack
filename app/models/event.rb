@@ -1,11 +1,7 @@
-class Event < ApplicationRecord
-  validates :event_type, :name, presence: true
-  scope :created_between, ->(from, to) {where('date > ? AND date < ?', from, to)}
-  scope :by_user_id, -> (user_id) {where(user_id: user_id)}
-	
+class Event < ActiveRecord::Base
   validates :name, :date, :value, presence: true
 
-  scope :relative_to, -> date do
-    where date: (date-24.hours)..(date+24.hours)
-  end
+  scope :created_between, ->(from, to) {where('date > ? AND date < ?', from, to)}
+  scope :by_user_id, -> (user_id) {where(user_id: user_id)}
+  scope :relative_to, -> date { where date: (date-24.hours)..(date+24.hours) }
 end
