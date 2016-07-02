@@ -4,6 +4,7 @@ class Api::ChartsController < ApplicationController
 		from = params[:from] || Date.today - 7.days
 		to = params[:to] ||  Date.today
 		events = Event.created_between(from,to) #.by_user_id(@user_id)
+		events = events.where(name: params[:name]) if !params[:name].nil?
 		events_chart = [ ]
 		events_names = events.distinct.pluck(:name)
 		events_names.each do |event_name|
