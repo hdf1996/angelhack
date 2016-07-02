@@ -17,7 +17,7 @@ angular.module("logu", [
           controller: 'DashboardController'
         })
         .state('dashboard.connect-applications', {
-          url: '/dashboard/connect-applications',
+          url: '/connect-applications',
           templateUrl: '/app/partials/connect-applications.html'
           // controller: 'DashboardController'
         })
