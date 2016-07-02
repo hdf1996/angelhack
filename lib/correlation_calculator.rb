@@ -9,24 +9,27 @@ class CorrelationCalculator
 
   def calculate
     self.all_event_names.map do |name|
-      calculate_correlation(name)
-    end
+      [name, calculate_correlation(name)]
+    end.to_h
   end
 
   def calculate_correlation(name)
-    events = Event.where name: name
-
     set_a, set_b = [], []
 
-    events.each do |e|
-      relative_events = compared_events.relative_to(e)
-      relative_value =
-        relative_events.sum(&:value) / relative_events.size
+    Event.where(name: name).find_each do |e|
+      begin
+        relative_events = compared_events.relative_to(e.date)
+        relative_value =
+           relative_events.sum(&:value) / relative_events.size
 
-      set_a << e.value
-      set_b << relative_value
+        set_a << e.value
+        set_b << relative_value
+      rescue ZeroDivisionError
+      end
     end
 
+    raise("OJO2") unless set_a.size == set_b.size
+    return 0 unless set_a.any?
     correlation_coefficient(set_a, set_b)
   end
 
