@@ -34,7 +34,6 @@ angular.module("logu")
               responsive: false
             }
           };
-
           new Chart(elem.find("canvas"), options);
         }, function (response) {
           console.error(response.data);

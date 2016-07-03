@@ -1,6 +1,6 @@
 <charts name="MetricController.metricName"></charts>
 <h2 class="section-title">Recommendations</h2>
-<div class="flex-row">
+<div class="flex-row" style="margin-bottom:40px;">
 	<div ng-repeat="(name, coefficient) in MetricController.eventCorrelations" class="recommendation-card flex-item">
 	  <i class="fa recommendation-card-icon" ng-class="{red: coefficient < 0, green: coefficient > 0, 'fa-futbol-o': name == 'run', 'fa-briefcase': name == 'work', 'fa-users': name == 'social', 'fa-bed': name == 'sleep'}" aria-hidden="true">
 		<i class="recommendation-card-arrow" ng-class="{'fa-arrow-down': coefficient < 0, 'fa-arrow-up': coefficient > 0}"></i>
