@@ -33,15 +33,23 @@ angular.module("logu")
             }
           }
         };
+        if (!scope.from) {
+          scope.from = "";
+        }
 
+        if (!scope.to) {
+          scope.to = "";
+        }
 
-        /*
-        $http.get("/api/charts", {
+        if (!scope.name) {
+          scope.name = "sleep";
+        }
+        $http.get("/api/charts?from=" + scope.from + "&to=" + scope.to , {
           headers: {
             user_id: localStorage.getItem("user")
           }
         }).then(function (response) {
-          options.data.datasets = response.data.map(function (dataset) {
+          options.data.datasets = response.data.data.map(function (dataset) {
             var red = Number(Math.ceil(Math.random() * 255));
             var green = Number(Math.ceil(Math.random() * 255));
             var blue = Number(Math.ceil(Math.random() * 255));
@@ -59,32 +67,32 @@ angular.module("logu")
         }, function (response) {
           console.error(response.data);
         });
-        */
+        
 
-        options.data.datasets = [
-          {
-            // Titulo que representa este set de datos
-            label: 'Horas de Sueño',
-            /* dataJson[0].name */
-            data: [5, 4, 5, 6, 8, 7, 3],
-            /* dataJson[0].data */
-            fill: false,
-            backgroundColor: "rgba(255,99,132,0.2)",
-            borderColor: "rgba(255,99,132,1)",
-            borderWidth: 1
-          },
-          {
-            // Titulo que representa este set de datos
-            label: 'Horas de Actividad Fisica',
-            /* dataJson[1].name */
-            data: [2, 3, 2, 1, 1, 4, 2],
-            /* dataJson[1].data */
-            fill: false,
-            backgroundColor: "rgba(255,99,132,0.2)",
-            borderColor: "rgba(108, 77, 93,1)",
-            borderWidth: 1
-          }
-        ];
+        // options.data.datasets = [
+        //   {
+        //     // Titulo que representa este set de datos
+        //     label: 'Horas de Sueño',
+        //     /* dataJson[0].name */
+        //     data: [5, 4, 5, 6, 8, 7, 3],
+        //     /* dataJson[0].data */
+        //     fill: false,
+        //     backgroundColor: "rgba(255,99,132,0.2)",
+        //     borderColor: "rgba(255,99,132,1)",
+        //     borderWidth: 1
+        //   },
+        //   {
+        //     // Titulo que representa este set de datos
+        //     label: 'Horas de Actividad Fisica',
+        //     /* dataJson[1].name */
+        //     data: [2, 3, 2, 1, 1, 4, 2],
+        //     /* dataJson[1].data */
+        //     fill: false,
+        //     backgroundColor: "rgba(255,99,132,0.2)",
+        //     borderColor: "rgba(108, 77, 93,1)",
+        //     borderWidth: 1
+        //   }
+        // ];
 
         new Chart(canvas, options);
       }
