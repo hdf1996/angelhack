@@ -21,17 +21,12 @@ angular.module("logu", [
           url: '/general',
           templateUrl: '/app/partials/general.html'
         })
-        .state('dashboard.sleep', {
-          url: '/sleep',
-          templateUrl: '/app/partials/sleep.html'
-        })
-        .state('dashboard.productivity', {
-          url: '/productivity',
-          templateUrl: '/app/partials/productivity.html'
-        })
-        .state('dashboard.activity', {
-          url: '/activity',
-          templateUrl: '/app/partials/activity.html'
+        .state('dashboard.metric', {
+          url: '/:name',
+          template: '<metric name="metricName"></metric>',
+          controller: function($stateParams, $scope) {
+            $scope.metricName = $stateParams.metricName;
+          }
         })
         .state('dashboard.connect-applications', {
           url: '/connect-applications',

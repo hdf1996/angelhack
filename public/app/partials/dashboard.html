@@ -12,19 +12,16 @@
         </a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a ui-sref="dashboard.sleep">Sleep</a>
+        <a ui-sref="dashboard.metric({name: 'sleep'})">Habitos de Suenio</a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a ui-sref="dashboard.productivity">
-          Productivity
-          <span class="sidebar-item-alerts">1</span>
-        </a>
+        <a ui-sref="dashboard.metric({name: 'work'})">Productividad Laboral</a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a ui-sref="dashboard.activity">
-          Activity
-          <span class="sidebar-item-alerts">2</span>
-        </a>
+        <a ui-sref="dashboard.metric({name: 'run'})">Actividad Fisica</a>
+      </li>
+      <li class="sidebar-item" ui-sref-active="active">
+        <a ui-sref="dashboard.metric({name: 'sexy_time'})">Vida Social</a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
         <a ui-sref="dashboard.connect-applications">Connect applications</a>
