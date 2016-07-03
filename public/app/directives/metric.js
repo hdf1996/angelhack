@@ -6,14 +6,19 @@ angular
 
 function directiveConstructor() {
   return {
+    restrict: "E",
+    templateUrl: "/app/partials/metric.html",
     bindToController: true,
     scope: { metricName: "=name" },
     controllerAs: "MetricController",
     controller: controller,
-    templateUrl: "/app/partials/metric.html"
   };
 
-  function controller() {
-
+  function controller($http) {
+    $http.get("/api/event_correlations/" + this.metricName)
+      .then(function(resp) {
+        this.eventCorrelations = resp.data;
+        this.color = "red"
+      }.bind(this));
   }
 }
