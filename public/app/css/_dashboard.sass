@@ -35,20 +35,23 @@
     padding: 0
     margin-top: 20px
 
+    .sidebar-item .fa
+      margin: 0 10px 0 4px
+    
+  .sidebar-item a
+    color: currentColor
+    display: inline-block
+    line-height: 48px
+    padding-left: 20px
+    letter-spacing: 1px
+    margin-bottom: 10px
+    position: relative
+
+    &:hover,
+    &:focus
+      text-decoration: none
+  
   .sidebar-item
-    a
-      color: currentColor
-      display: block
-      line-height: 48px
-      padding-left: 20px
-      letter-spacing: 1px
-      margin-bottom: 10px
-      position: relative
-
-      &:hover,
-      &:focus
-        text-decoration: none
-
     &.active a,
     &:hover a
       text-decoration: none
