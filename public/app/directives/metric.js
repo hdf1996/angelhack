@@ -15,10 +15,13 @@ function directiveConstructor() {
   };
 
   function controller($http) {
+    this.loading = true;
+
     $http.get("/api/event_correlations/" + this.metricName)
       .then(function(resp) {
         this.eventCorrelations = resp.data;
         this.color = "red"
+        this.loading = false;
       }.bind(this));
   }
 }
