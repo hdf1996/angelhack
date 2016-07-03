@@ -14,6 +14,18 @@
   margin-bottom: 50px;
 }
 
+/*Application*/
+
+.application-image{
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: contain;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .application-card{
   background-color: white;
   overflow: hidden;
@@ -28,11 +40,10 @@
 }
 
 .application-title{
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  text-align: center;
+  margin: 10px 0 20px 0;
 }
 
 .application-card .btn{
-  align-self: flex-end;
+  margin-top: 20px;
 }
