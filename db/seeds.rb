@@ -1,7 +1,7 @@
 require "ffaker"
 
 ActiveRecord::Base.transaction do
-  #Event.destroy_all
+  Event.destroy_all
 
   120.downto(1).each do |i|
     date = Time.now - i.days
@@ -16,6 +16,17 @@ ActiveRecord::Base.transaction do
       ),
       value: rand(30..120)
     )
+
+    Event.create!(
+      name: "grades",
+      date: Time.new(
+        date.year,
+        date.month,
+        date.day,
+        rand(1..8)
+      ),
+      value: rand(3..10)
+    ) if (i % 30) == 0
 
     Event.create!(
       name: "run",
