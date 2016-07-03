@@ -9,7 +9,15 @@
       <h3 class="application-title">Fitbit</h3>
       <p>Fitbit is a small device to track your physical activity or sleep.  You can wear the device all day because it easily clips in your pocket, pants, shirt, bra, or to your wrist when you are sleeping</p>
     </div>
-    <button type="button" class="btn btn-success pull-right">Connect</button>
+    <button
+      type="button"
+      class="btn"
+      data-ng-init="fitbitActive=false"
+      data-ng-click="fitbitActive=!fitbitActive"
+      data-ng-class="{'btn-success': fitbitActive, 'btn-default': !fitbitActive}"
+      ng-bind="fitbitActive ? 'Connected' : 'Connect'"
+    >
+    </button>
   </div>
   <div class="application-card flex-item">
     <div>
@@ -17,7 +25,15 @@
       <h3 class="application-title">Digifit</h3>
       <p>The Digifit ecosystem is a full suite of Apple apps that records heart rate, pace, speed, cadence, and power of your running, cycling and other athletic endeavors.</p>
     </div>
-    <button type="button" class="btn btn-success pull-right">Connect</button>
+    <button
+      type="button"
+      class="btn btn-default"
+      data-ng-init="DigifitActive=false"
+      data-ng-click="DigifitActive=!DigifitActive"
+      data-ng-class="{'btn-success': DigifitActive, 'btn-default': !DigifitActive}"
+      ng-bind="DigifitActive ? 'Connected' : 'Connect'"
+    >
+    </button>
   </div>
 </div>
 
@@ -32,7 +48,7 @@
       <h3 class="application-title">Wakemate</h3>
       <p>Wakemate is a sleep system that records the user's sleep state to a mobile device and wakes the user during the lightest sleep phase within twenty minutes of the alarm.</p>
     </div>
-    <button type="button" class="btn btn-success pull-right">Connect</button>
+    <button type="button" class="btn btn-default">Connect</button>
   </div>
   <div class="application-card flex-item">
     <div>
@@ -40,7 +56,7 @@
       <h3 class="application-title">BodyMedia</h3>
       <p>BodyMedia a system that give you highly accurate information on activity, calories, and sleep pattern. </p>
     </div>
-    <button type="button" class="btn btn-success pull-right">Connect</button>
+    <button type="button" class="btn btn-default">Connect</button>
   </div>
 </div>
 
@@ -56,7 +72,15 @@
       <h3 class="application-title">RescueTime</h3>
       <p>RescueTime is an web-based automated time tracking and management tool. All you need to do is install the RescueTime software and you can track your use of time usage</p>
     </div>
-    <button type="button" class="btn btn-success pull-right">Connect</button>
+    <button
+      type="button"
+      class="btn btn-default"
+      data-ng-init="rescueTimeActive=false"
+      data-ng-click="rescueTimeActive=!rescueTimeActive"
+      data-ng-class="{'btn-success': rescueTimeActive, 'btn-default': !rescueTimeActive}"
+      ng-bind="rescueTimeActive ? 'Connected' : 'Connect'"
+    >
+    </button>
   </div>
   <div class="application-card flex-item">
     <div>
@@ -64,6 +88,6 @@
       <h3 class="application-title">42Goals</h3>
       <p>42Goals is a flexible goal tracking web app which allows users to track, chart, annotate and evaluate many different goals in one place. </p>
     </div>
-    <button type="button" class="btn btn-success pull-right">Connect</button>
+    <button type="button" class="btn btn-default">Connect</button>
   </div>
 </div>
