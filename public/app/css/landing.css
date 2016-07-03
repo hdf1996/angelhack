@@ -1,11 +1,20 @@
 .hero{
   text-align: center;
   color: white;
-  padding: 100px 0;
+  padding-top: 100px;
+  overflow: hidden;
   position: relative;
-  background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #76b852 , #8DC26F); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #76b852 , #8DC26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #000000 , #53346D); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #000000 , #53346D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.hero .landing-screenshot{
+  max-width: 720px;
+  margin-top: 20px;
+  position: relative;
+  top: 60px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .hero .authentication{
@@ -19,13 +28,18 @@
 }
 
 .hero .logo{
-  font-size: 36px;
   font-weight: bold;
+}
+
+.hero .logo-text{
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 50px;
+  font-size: 48px;
 }
 
 .landing{
   text-align: center;
-  padding-top: 30px;
+  padding-top: 100px;
 }
 
 .landing ul{

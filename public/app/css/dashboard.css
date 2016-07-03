@@ -25,7 +25,14 @@
   line-height: 64px;
   margin: 0;
   border-bottom: 1px solid rgba(255,255,255,.1);
-  padding-left: 20px;
+}
+
+.dashboard .logo .logo-image{
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 7px auto;
+  padding: 10px 0
 }
 
 .dashboard .sidebar-list{
@@ -42,12 +49,26 @@
   padding-left: 20px;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  position: relative;
 }
 .dashboard .sidebar-item.active a,
 .dashboard .sidebar-item:hover a{
   text-decoration: none;
   padding-left: 16px;
   border-left: 4px solid #50E3C2;
+}
+
+.sidebar-item-alerts{
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  background-color: #50E3C2;
+  color: #222228;
+  padding: 4px 6px;
+  border-radius: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
 }
 
 /* Content */

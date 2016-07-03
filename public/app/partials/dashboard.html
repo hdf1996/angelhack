@@ -1,6 +1,10 @@
 <div class="dashboard">
   <sidebar>
-    <h1 class="logo">log ü</h1>
+    <h1 class="logo">
+      <a ui-sref="dashboard.general">
+        <img src="app/images/logo.svg" class="logo-image" alt="" />
+      </a>
+    </h1>
     <ul class="sidebar-list">
       <li class="sidebar-item" ui-sref-active="active">
         <a ui-sref="dashboard.general">
@@ -8,13 +12,19 @@
         </a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a href="#">Sleep</a>
+        <a ui-sref="dashboard.sleep">Sleep</a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a href="#">Productivity</a>
+        <a ui-sref="dashboard.productivity">
+          Productivity
+          <span class="sidebar-item-alerts">1</span>
+        </a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
-        <a href="#">Phisical activity</a>
+        <a ui-sref="dashboard.activity">
+          Activity
+          <span class="sidebar-item-alerts">2</span>
+        </a>
       </li>
       <li class="sidebar-item" ui-sref-active="active">
         <a ui-sref="dashboard.connect-applications">Connect application</a>
