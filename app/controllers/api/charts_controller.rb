@@ -14,7 +14,7 @@ class Api::ChartsController < ApplicationController
 				data_by_days.push current_events.where(date:from + day.days).try(:first).try(:value) 
 			end
 			event_chart = {
-			   label: event_name,
+			   label: I18n.t(event_name),
 		       data: data_by_days
 			}
 			events_chart.push event_chart
