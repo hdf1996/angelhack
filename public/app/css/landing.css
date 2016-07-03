@@ -1,7 +1,8 @@
 .hero{
   text-align: center;
   color: white;
-  padding-top: 100px;
+  padding-top: 80px;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   background: #000000; /* fallback for old browsers */
@@ -11,24 +12,44 @@
 
 .hero .landing-screenshot{
   max-width: 720px;
-  margin-top: 20px;
-  position: relative;
-  top: 60px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-}
-
-.hero .authentication{
   position: absolute;
-  top: 30px;
-  right: 30px;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
-.hero .authentication .btn + .btn{
-  margin-left: 10px;
+.hero-description{
+  font-size: 18px;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.hero .logo{
-  font-weight: bold;
+.hero-cta{
+  margin-top: 30px;
+  display: inline-block;
+  background-color: #ff5335;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 25px 30px;
+  border-radius: 3px;
+  box-shadow: 0 5px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.hero-cta:hover,
+.hero-cta:focus{
+  color: white;
+  text-decoration: none;
+  background-color: #ff3c1a;
+}
+
+.hero .logo-image{
+  width: 100px;
 }
 
 .hero .logo-text{
@@ -37,48 +58,83 @@
   font-size: 48px;
 }
 
-.landing{
-  text-align: center;
-  padding-top: 100px;
+.hero-integrations{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  pointer-events: none;
 }
 
-.landing ul{
-  list-style-type: none;
-  font-size: 24px;
-}
-
-.landing li{
-  margin-bottom: 100px;
-}
-
-.landing ul .step{
-  display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  background-color: black;
-  color: white;
-  font-size: 14px;
+.hero-integrations > div{
+  background-color: white;
   border-radius: 50%;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  margin-top: 50px;
-}
-
-.landing ul img{
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
-
-.step2-photo{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  background-image: url('../images/step2.png');
+  box-shadow: 0 2px 15px rgba(0,0,0,0.50);
   background-position: center center;
-  background-size: cover;
   background-repeat: no-repeat;
+  position: absolute;
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+.hero-integrations .fitbit{
+  background-image: url('../images/integrations/fitbit.png');
+  background-size: 70% 70%;
+  top: 140px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.hero-integrations .rescuetime{
+  width: 80px;
+  height: 80px;
+  background-image: url('../images/integrations/rescuetime.png');
+  background-size: 70% 70%;
+  top: 70px;
+  left: 250px;
+  -webkit-animation-delay: 1s;
+  animation-delay: -1s;
+}
+
+.hero-integrations .nike{
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/integrations/nike+.png');
+  background-size: 70% 70%;
+  top: 70px;
+  right: 210px;
+  -webkit-animation-delay: 1s;
+  animation-delay: -1.5s;
+}
+
+.hero-integrations .googlefit{
+  width: 70px;
+  height: 70px;
+  background-image: url('../images/integrations/googlefit.png');
+  background-size: 70% 70%;
+  top: 200px;
+  right: 80px;
+  -webkit-animation-delay: 1s;
+  animation-delay: -0.75s;
+}
+
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 15px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}
+
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}
 }

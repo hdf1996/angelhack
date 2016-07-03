@@ -1,14 +1,14 @@
 class Api::EventsController < ApplicationController
 	def index
-		if !params[:event_type].nil?
-			render json: Event.where(event_type:params[:event_type])
+		if !params[:name].nil?
+			render json: Event.where(name:params[:name])
 		else
 			render json: Event.all
 		end
 	end
 	def chart
-		if !params[:event_type].nil?
-			render json: Event.where(event_type:params[:event_type])
+		if !params[:name].nil?
+			render json: Event.where(name:params[:name])
 		else
 			render json: Event.all
 		end
