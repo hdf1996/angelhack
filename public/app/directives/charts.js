@@ -30,7 +30,7 @@ angular.module("logu")
               })
             },
             options: {
-              scales: { xAxes: [{ type: 'time', position: 'bottom' }] },
+              scales: { xAxes: [{ type: 'time', position: 'bottom', beginAtZero:true}], yAxes: [{ beginAtZero:true}] },
               responsive: false
             }
           };
