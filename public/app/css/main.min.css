@@ -289,6 +289,9 @@
 .dashboard canvas {
   height: 300px !important;
   width: 1000px !important; }
+.dashboard .chart-container {
+  background-color: white;
+  width: 100%; }
 
 .flex-row {
   display: flex;
