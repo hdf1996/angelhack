@@ -14,14 +14,14 @@ angular.module("logu")
           type: 'line',
           data: {
             // Etiquetas en el eje X en este caso los dias
-            labels: ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+            labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
           },
           options: {
             // En true toma el ancho y alto de la caja padre
             responsive: false,
             // Titulo del Chart
             title: {
-              display: true,
+              display: false,
               text: "Demo LogÜ"
             },
             scales: {
@@ -57,7 +57,7 @@ angular.module("logu")
             return {
               label: dataset.label,
               data: dataset.data,
-              fill: false,
+              fill: true,
               borderWidth: 1,
               backgroundColor: 'rgba(' + red + ',' + green + ',' + blue + ',0.2)',
               borderColor: 'rgba(' + red + ',' + green + ',' + blue + ',1)'
@@ -94,7 +94,7 @@ angular.module("logu")
         //   }
         // ];
 
-        new Chart(canvas, options);
+       // new Chart(canvas, options);
       }
     }
   }]);

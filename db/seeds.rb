@@ -1,7 +1,7 @@
 require "ffaker"
 
 ActiveRecord::Base.transaction do
-  Event.destroy_all
+  #Event.destroy_all
 
   120.downto(1).each do |i|
     date = Time.now - i.days
@@ -14,7 +14,7 @@ ActiveRecord::Base.transaction do
         date.day,
         rand(20..23)
       ),
-      value: rand((1.hours / 60)..(10.hours / 60))
+      value: rand(30..120)
     )
 
     Event.create!(
@@ -40,7 +40,7 @@ ActiveRecord::Base.transaction do
     ) if (1..5) === date.wday
 
     Event.create!(
-      name: "sexy_time",
+      name: "social",
       date: Time.new(
         date.year,
         date.month,
