@@ -1,7 +1,7 @@
 class Api::ChartsController < ApplicationController
 	before_action :select_user, only: [:index]
 	def index
-		from = !params[:from].blank? ? params[:from] : Date.today - 7.days
+		from = !params[:from].blank? ? params[:from] : Date.today - 180.days
 		to = !params[:to].blank? ? params[:to] :  Date.today
 		events = Event.created_between(from,to) #.by_user_id(@user_id)
 		events = events.where(name: params[:name]) if !params[:name].nil?
