@@ -45,7 +45,12 @@
       margin-bottom: 10px
       position: relative
 
-    &.active a, &:hover a
+      &:hover,
+      &:focus
+        text-decoration: none
+
+    &.active a,
+    &:hover a
       text-decoration: none
       padding-left: 16px
       border-left: 4px solid #50E3C2
@@ -110,7 +115,37 @@
 // Recommendation card
 
 .recommendation-card
-  background-color: green
+  position: relative
+  margin-top: 50px !important
+
+  .recommendation-card-icon
+    display: inline-block
+    width: 100px
+    height: 100px
+    text-align: center
+    line-height: 100px
+    background-color: #7ED321
+    color: white
+    position: absolute
+    left: 50%
+    top: -50px
+    transform: translateX(-50%)
+    border-radius: 50%
+    font-size: 36px
+
+    &.red
+      background-color: #D0021B
+
+    &.white
+      background-color: white
+
+    &.green
+      background-color: #7ED321
+
+  .recommendation-card-content
+    text-align: center
+    background-color: white
+    padding: 70px 0 40px 0
 
 
 // Canvas
