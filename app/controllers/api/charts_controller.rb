@@ -1,16 +1,13 @@
 class Api::ChartsController < ApplicationController
 	before_action :select_user, only: [:index]
 	def index
-		data = Events.distinct.pluck(:name).map do |event_name|
-      from = params.fetch(:from).to_date
-      to = params.fetch(:from).to_date
-      events = Event.where(name: event_name, date: from..to).map do |e|
-        [e.date, e.value]
-      end.to_h
-
+		data = Event.distinct.pluck(:name).map do |event_name|
+      from = params.fetch(:from, Time.now - 7.days).to_date
+      to = params.fetch(:from, Time.now).to_date
+      
       {
         event_name: event_name,
-        events: events
+        events: Event.where(name: event_name, date: from..to)
       }
     end
 
