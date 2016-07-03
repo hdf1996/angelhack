@@ -6,14 +6,14 @@ angular.module("logu")
       templateUrl: "app/partials/charts.html",
       scope: {
         sets: "=",
-        from: "=",
-        to: "=",
-        name: "="
+        from: "=?",
+        to: "=?",
+        name: "=?",
+
       },
       link: function (scope, elem, attr) {
         "use strict";
-        var canvas = elem.find("canvas").eq(0);
-
+        var canvas = $("canvas");//elem.find("canvas");
         if (!scope.from) {
           scope.from = "";
         }
@@ -22,14 +22,32 @@ angular.module("logu")
           scope.to = "";
         }
 
-
-        scope.name="sleep"
+        if (!scope.name) {
+          scope.name = "sleep";
+        }
         $http.get("/api/charts?from=" + scope.from + "&to=" + scope.to + "&name=" + scope.name, {
           headers: {
             user_id: localStorage.getItem("user")
           }
         }).then(function (response) {
-          options.data.datasets = response.data.map(function (dataset) {
+          var options ={
+            type: 'line',
+            data:{
+
+              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+              datasets:[]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+          };
+          options.data.datasets = response.data.data.map(function (dataset) {
             var red = Number(Math.ceil(Math.random() * 255));
             var green = Number(Math.ceil(Math.random() * 255));
             var blue = Number(Math.ceil(Math.random() * 255));
@@ -44,6 +62,7 @@ angular.module("logu")
               borderColor: 'rgba(' + red + ',' + green + ',' + blue + ',1)'
             }
           });
+
           new Chart(canvas, options);
         }, function (response) {
           console.error(response.data);
@@ -72,7 +91,7 @@ angular.module("logu")
         ];
       */
 
-        new Chart(canvas, options);
+        //new Chart(canvas, options);
       }
     }
   }]);

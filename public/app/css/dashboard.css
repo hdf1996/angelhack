@@ -117,3 +117,8 @@
   padding: 93px 30px 0 30px;
   height: 100%;
 }
+canvas
+{
+  height:300px !important;
+  width:1000px !important;
+}
