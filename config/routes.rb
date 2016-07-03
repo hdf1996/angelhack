@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   	resources :events
   	resources :charts, only: [:index, :show]
     get "/event_correlations/:event_name", to: "event_correlations#show"
-    get "/event_correlations/:event_name/conclusions", to: "event_correlations#conclusions"
   end
 end

@@ -21,7 +21,8 @@
 
 en:
   hello: "Hello world"
-  sleep: "Sleeping"
-  run: "Running"
-  work: "Working"
+  sleep: "Sleep"
+  run: "Run"
+  work: "Work"
   sexy_time: "Socials"
+  social: "Socials"
