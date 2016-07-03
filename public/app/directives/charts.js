@@ -36,10 +36,11 @@ angular.module("logu")
           scope.to = "";
         }
 
-        $http.get("/api/charts?from=" + scope.from + "&to=" + scope.to , {
+        $http.get("/api/charts" , {
           headers: { user_id: localStorage.getItem("user") }
         }).then(function (response) {
           options.data.datasets = response.data.data.map(function (dataset) {
+            debugger;
             var red = Number(Math.ceil(Math.random() * 255));
             var green = Number(Math.ceil(Math.random() * 255));
             var blue = Number(Math.ceil(Math.random() * 255));
