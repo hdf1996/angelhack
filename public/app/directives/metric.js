@@ -18,6 +18,7 @@ function directiveConstructor() {
     $http.get("/api/event_correlations/" + this.metricName)
       .then(function(resp) {
         this.eventCorrelations = resp.data;
+        this.color = "red"
       }.bind(this));
   }
 }
