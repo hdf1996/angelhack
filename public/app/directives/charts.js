@@ -5,7 +5,8 @@ angular.module("logu")
       restrict: "AE",
       templateUrl: "app/partials/charts.html",
       scope: {
-        sets: "="
+        sets: "=",
+        name: "="
       },
       link: function (scope, elem, attr) {
         "use strict";
@@ -24,13 +25,7 @@ angular.module("logu")
               display: true,
               text: "Demo LogÜ"
             },
-            scales: {
-              yAxes: [{
-                ticks: {
-                  beginAtZero: true
-                }
-              }]
-            }
+            scales: { yAxes: [{ ticks: { beginAtZero: true } }] }
           }
         };
         if (!scope.from) {
@@ -41,13 +36,8 @@ angular.module("logu")
           scope.to = "";
         }
 
-        if (!scope.name) {
-          scope.name = "sleep";
-        }
         $http.get("/api/charts?from=" + scope.from + "&to=" + scope.to , {
-          headers: {
-            user_id: localStorage.getItem("user")
-          }
+          headers: { user_id: localStorage.getItem("user") }
         }).then(function (response) {
           options.data.datasets = response.data.data.map(function (dataset) {
             var red = Number(Math.ceil(Math.random() * 255));
@@ -67,7 +57,7 @@ angular.module("logu")
         }, function (response) {
           console.error(response.data);
         });
-        
+
 
         // options.data.datasets = [
         //   {
@@ -94,9 +84,7 @@ angular.module("logu")
         //   }
         // ];
 
-        new Chart(canvas, options);
+        // new Chart(canvas, options);
       }
     }
   }]);
-
-

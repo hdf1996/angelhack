@@ -1,1 +1,4 @@
 <charts name="MetricController.metricName"></charts>
+<div ng-repeat="(name, correlations) in MetricController.eventCorrelations">
+  {{ name }} {{ correlations }}
+</div>
