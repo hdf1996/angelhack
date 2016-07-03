@@ -16,7 +16,7 @@
   position: absolute;
   bottom: -150px;
   left: 50%;
-  transform: translateX(-50%);
+  margin-left: -360px;
   z-index: 1000;
 }
 
