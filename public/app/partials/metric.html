@@ -1,14 +1,16 @@
 <charts name="MetricController.metricName"></charts>
 <h2 class="section-title">Recommendations</h2>
 <div class="flex-row">
-  <div ng-repeat="(name, coefficient) in MetricController.eventCorrelations" class="recommendation-card flex-item">
-    <i class="fa recommendation-card-icon" ng-class="{red: coefficient < 0, green: coefficient > 0, 'fa-futbol-o': name == 'run', 'fa-briefcase': name == 'work', 'fa-users': name == 'social', 'fa-bed': name == 'sleep'}" aria-hidden="true"></i>
-    <div class="recommendation-card-content">
-
-      <h1 class="recommendation-card-title">{{name}} </h1>
-      <p>You <strong>{{MetricController.metricName}}</strong> more when you
-        <strong ng-if="coefficient>=0"> increase</strong>
-        <strong ng-if="coefficient<0"> decrease</strong>
+	<div ng-repeat="(name, coefficient) in MetricController.eventCorrelations" class="recommendation-card flex-item">
+	  <i class="fa recommendation-card-icon" ng-class="{red: coefficient < 0, green: coefficient > 0, 'fa-futbol-o': name == 'run', 'fa-briefcase': name == 'work', 'fa-users': name == 'social', 'fa-bed': name == 'sleep'}" aria-hidden="true">
+		<i class="recommendation-card-arrow" ng-class="{'fa-arrow-down': coefficient < 0, 'fa-arrow-up': coefficient > 0}"></i>
+	  </i>
+	  <div class="recommendation-card-content">
+		
+	  	<h1 class="recommendation-card-title">{{name}} </h1>
+	    <p>You <strong>{{MetricController.metricName}}</strong> more when you 
+	    <strong ng-if="coefficient>=0"> increase</strong>
+	    <strong ng-if="coefficient<0"> decrease</strong>
 
         your <strong>{{name}} activity</strong>.</p>
       </div>
