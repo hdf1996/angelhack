@@ -158,8 +158,12 @@
     padding: 50px;
     border-radius: 10px; }
   .login input {
+    font-family: "FontAwesome";
     margin-bottom: 20px;
+    font-size: 18px;
     height: 44px; }
+  .login .btn {
+    margin-bottom: 20px; }
 
 .dashboard {
   width: 100%;
