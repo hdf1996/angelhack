@@ -22,7 +22,7 @@ angular.module("logu")
           scope.to = "";
         }
 
-
+        scope.name="sleep"
         $http.get("/api/charts?from=" + scope.from + "&to=" + scope.to + "&name=" + scope.name, {
           headers: {
             user_id: localStorage.getItem("user")
