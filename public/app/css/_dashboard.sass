@@ -1,0 +1,108 @@
+.dashboard
+  width: 100%
+  height: 100vh
+  overflow: hidden
+  background-color: rgba(0, 0, 0, 0.05)
+  position: relative
+
+  sidebar
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 250px
+    height: 100vh
+    background-color: #222228
+
+  .logo
+    color: white
+    font-size: 28px
+    line-height: 64px
+    margin: 0
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+    .logo-image
+      display: block
+      width: 50px
+      height: 50px
+      margin: 7px auto
+      padding: 10px 0
+
+  .sidebar-list
+    list-style-type: none
+    color: rgba(255, 255, 255, 0.75)
+    padding: 0
+    margin-top: 20px
+
+  .sidebar-item
+    a
+      color: currentColor
+      display: block
+      line-height: 48px
+      padding-left: 20px
+      letter-spacing: 1px
+      margin-bottom: 10px
+      position: relative
+
+    &.active a, &:hover a
+      text-decoration: none
+      padding-left: 16px
+      border-left: 4px solid #50E3C2
+
+/* Sidebar
+
+.sidebar-item-alerts
+  display: inline-block
+  position: absolute
+  right: 20px
+  background-color: #50E3C2
+  color: #222228
+  padding: 4px 6px
+  border-radius: 3px
+  top: 50%
+  transform: translateY(-50%)
+  line-height: 1
+
+/* Content
+
+.dashboard
+
+  .content
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 250px
+
+  .head
+    height: 64px
+    background-color: white
+    position: absolute
+    z-index: 1000
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+    top: 0
+    left: 0
+    right: 0
+
+  .avatar
+    float: right
+    padding: 0 15px
+
+  .avatar-image
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    display: inline-block
+    margin-left: 10px
+    line-height: 64px
+
+  .avatar-name
+    display: inline-block
+    color: rgba(0, 0, 0, 0.84)
+    line-height: 64px
+
+  .main-content
+    overflow-y: scroll
+    padding: 93px 30px 0 30px
+    height: 100%

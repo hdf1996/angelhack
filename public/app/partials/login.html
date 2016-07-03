@@ -1,17 +1,18 @@
 <div class="login">
-  <form ng-submit="login()">
+  <a ui-sref="home" class="close-login">&times;</a>
+  <form ng-submit="login()" class="animated fadeIn">
     <div class="form-group">
       <img src="app/images/logo.svg" class="logo-image" alt="" />
       <input class="form-control"
-      type="text"
-      id="username"
-      ng-model="user.name"
-      placeholder="User">
+        type="text"
+        id="username"
+        ng-model="user.name"
+        placeholder="User">
       <input class="form-control"
-      type="password"
-      id="password"
-      ng-model="user.password"
-      placeholder="Password">
+        type="password"
+        id="password"
+        ng-model="user.password"
+        placeholder="Password">
       <button type="submit" class="btn btn-default btn-lg btn-block">Log in</button>
     </div>
   </form>
