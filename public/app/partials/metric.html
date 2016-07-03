@@ -1,8 +1,9 @@
+<div class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" ng-if="loading" style="margin: 0 auto;display: block;margin-top: 120px;opacity: 0.5;"></div>
 <charts name="MetricController.metricName"></charts>
 <h2 class="section-title">Recommendations</h2>
 <div class="flex-row" style="margin-bottom:40px;">
 	<div ng-repeat="(name, coefficient) in MetricController.eventCorrelations" class="recommendation-card flex-item">
-	  <i class="fa recommendation-card-icon" ng-class="{red: coefficient < 0, green: coefficient > 0, 'fa-futbol-o': name == 'run', 'fa-briefcase': name == 'work', 'fa-users': name == 'social', 'fa-bed': name == 'sleep'}" aria-hidden="true">
+	  <i class="fa recommendation-card-icon" ng-class="{red: coefficient < 0, green: coefficient > 0, 'fa-futbol-o': name == 'run', 'fa-briefcase': name == 'work', 'fa-users': name == 'social', 'fa-bed': name == 'sleep', 'fa-graduation-cap': name == 'grades'}" aria-hidden="true">
 		<i class="recommendation-card-arrow" ng-class="{'fa-arrow-down': coefficient < 0, 'fa-arrow-up': coefficient > 0}"></i>
 	  </i>
 	  <div class="recommendation-card-content">
