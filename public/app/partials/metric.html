@@ -1,4 +1,12 @@
-<charts name="MetricController.metricName"></charts>
-<div ng-repeat="(name, correlations) in MetricController.eventCorrelations">
-  {{ name }} {{ correlations }}
+<!-- <charts name="MetricController.metricName"></charts> -->
+<div class="flex-row">
+  <div ng-repeat="(name, coefficient) in MetricController.eventCorrelations">
+    <h1 class="section-title">{{name}}</h1>
+    <div class="recommendation-card flex-item">
+      <i class="fa fa-futbol-o recommendation-card-icon" ng-class="{red: coefficient < 0, green: coefficient > 0}" aria-hidden="true"></i>
+      <div class="recommendation-card-content">
+        <p>You <strong>{{MetricController.metricName}}</strong> more when you <strong>increase your {{name}} activity</strong>.</p>
+      </div>
+    </div>
+  </div>
 </div>
