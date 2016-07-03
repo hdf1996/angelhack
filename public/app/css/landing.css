@@ -64,6 +64,7 @@
   left: 0;
   right: 0;
   height: 400px;
+  pointer-events: none;
 }
 
 .hero-integrations > div{
@@ -74,11 +75,11 @@
   background-repeat: no-repeat;
   position: absolute;
   -webkit-animation-name: Floatingx;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -moz-animation-name: Floating;
-  -moz-animation-duration: 3s;
+  -moz-animation-duration: 5s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: ease-in-out;
 }
@@ -109,10 +110,22 @@
   background-image: url('../images/integrations/nike+.png');
   background-size: 70% 70%;
   top: 70px;
-  right: 220px;
+  right: 210px;
   -webkit-animation-delay: 1s;
   animation-delay: -1.5s;
 }
+
+.hero-integrations .googlefit{
+  width: 70px;
+  height: 70px;
+  background-image: url('../images/integrations/googlefit.png');
+  background-size: 70% 70%;
+  top: 200px;
+  right: 80px;
+  -webkit-animation-delay: 1s;
+  animation-delay: -0.75s;
+}
+
 
 @-webkit-keyframes Floatingx{
     from {-webkit-transform:translate(0, 0px);}
