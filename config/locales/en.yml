@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  sleep: "Sleeping"
+  run: "Running"
+  work: "Working"
+  sexy_time: "Socials"
