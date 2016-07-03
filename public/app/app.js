@@ -17,6 +17,10 @@ angular.module("logu", [
           templateUrl: '/app/partials/dashboard.html',
           controller: 'DashboardController'
         })
+        .state('dashboard.connect-applications', {
+          url: '/connect-applications',
+          templateUrl: '/app/partials/connect-applications.html'
+        })
         .state('dashboard.general', {
           url: '/general',
           templateUrl: '/app/partials/general.html'
@@ -25,12 +29,8 @@ angular.module("logu", [
           url: '/:name',
           template: '<metric name="metricName"></metric>',
           controller: function($stateParams, $scope) {
-            $scope.metricName = $stateParams.metricName;
+            $scope.metricName = $stateParams.name;
           }
-        })
-        .state('dashboard.connect-applications', {
-          url: '/connect-applications',
-          templateUrl: '/app/partials/connect-applications.html'
         })
         .state('login', {
           url: '/login',
