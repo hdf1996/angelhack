@@ -12,7 +12,7 @@
   margin: 0 auto;
   width: 60px;
   height: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .login form{
@@ -27,5 +27,6 @@
 }
 
 .login input{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  height: 44px;
 }
