@@ -201,7 +201,7 @@
       margin: 0 10px 0 4px; }
   .dashboard .sidebar-item a {
     color: currentColor;
-    display: inline-block;
+    display: block;
     line-height: 48px;
     padding-left: 20px;
     letter-spacing: 1px;
